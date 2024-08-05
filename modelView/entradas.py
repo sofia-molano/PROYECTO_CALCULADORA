@@ -9,7 +9,7 @@ def ingresar(tecla, entrada1):
 
     op1 = ['+', '-', '*', '/', '^', '(', ')', '.', '!']
     op2 = ['sin', 'cos', 'tan', 'asin', 'acos', 'atan', 'log']
-    op3 = ['√', 'x²', 'x√n', '||', 'x/y', '±', 'f(x)']
+    op3 = ['√', 'x²', 'x√n', '||', 'x/y', '±', 'f(x)', 'x°', 'P rad']
     
     if tecla.isdigit() or tecla in 'xyzπe' or tecla in op1:
         entrada1.set(entrada1.get() + tecla)
@@ -26,6 +26,13 @@ def ingresar(tecla, entrada1):
             entrada1.set('abs(' + entrada1.get() + ')')
         elif tecla == '±':
             entrada1.set(tecla + entrada1.get())
+        #Radianes a grados
+        elif tecla == 'x°':
+            entrada1.set('math.degrees(' + entrada1.get() + ')')
+        #Grados a radianes
+        elif tecla == 'P rad':
+            entrada1.set('math.radians(' + entrada1.get() + ')')
+    
     elif tecla == '=':
         expresion = entrada1.get()
         expresion = expresion.replace('^', '**')
