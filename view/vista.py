@@ -145,6 +145,12 @@ button_borrar_todo = ttk.Button(mainframe, text="C", style='Botones_borrar.TButt
 button_punto=ttk.Button(mainframe,text=".",style='Botones_numeros.TButton',command=lambda:entradas.ingresar('.',entrada1))
 button_fx=ttk.Button(mainframe,text="f(x)",style='Boton_graficar.TButton', command=lambda:entradas.ingresar('f(x)',entrada1))
 button_graficar=ttk.Button(mainframe,text="graficar",style='Boton_graficar.TButton', command=lambda:ventana_grafica.abrir_ventana())
+
+#Boton radianes a grados
+button_radian_g = ttk.Button (mainframe, text="x°", style='Botones_especiales.TButton', command=lambda: entradas.ingresar('x°', entrada1) )
+#Boton grados a radianes
+button_grados_r = ttk.Button (mainframe, text="π rad", style='Botones_especiales.TButton', command=lambda: entradas.ingresar('P rad', entrada1) )
+
 #---------------------------------------------------------------------------------------------------------------------------------------------------------
 #Colocar botones en pantalla
 
@@ -203,6 +209,11 @@ button_arctan.grid(column=8, row=6,sticky=(W,E,N,S))
 button_factorial.grid(column=0, row=6,sticky=(W,E,N,S))
 button_maso.grid(column=1, row=6,sticky=(W,E,N,S))
 button_integral.grid(column=2, row=6,sticky=(W,E,N,S))
+
+#Radianes a grados
+button_radian_g.grid (column=7, row=1, sticky = (W,E,N,S))
+#grados a radianes
+button_grados_r.grid (column=8, row=1, sticky = (W,E,N,S))
 #---------------------------------------------------------------------------------------------------------------------------
 
 for child in mainframe.winfo_children():
