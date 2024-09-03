@@ -1,6 +1,4 @@
-import sys
-sys.path.insert(1,'E:/PROYECTO_CALCULADORA/view')
-import vista
+import MODEL_usuarios as vu
 
 if __name__ == "__main__":
-    vista.root.mainloop()
+    vu.ventana_sesion.mainloop()
